@@ -1,0 +1,236 @@
+    1  groups
+    2  ps
+    3  docker ps
+    4  minikube start
+    5  kubectl get po -A
+    6  minikube kubectl -- get po -A
+    7  alias kubectl="minikube kubectl --"
+    8  minikube dashboard
+    9  kubectl version
+   10  kubectl cluster-info
+   11  kubectl get nodes
+   12  kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1
+   13  kubectl get deployments
+   14  echo -e "Starting Proxy. After starting it will not output a response. Please return to your original terminal window\n"; kubectl proxy
+   15  kubectl describe pods
+   16  kubectl get deployments
+   17  kubectl get services
+   18  kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080
+   19  kubectl get services
+   20  kubectl delete service -l app=kubernetes-bootcamp
+   21  kubectl get deployments
+   22  kubectl delete deployment kubernetes-bootcamp
+   23  kubectl get deployments
+   24  git clone https://github.com/mhmtonrn/k8sfundamentals.git
+   25  ll
+   26  vi
+   27  cd k8sfundamentals/
+   28  ll
+   29  cd setup/
+   30  ll
+   31  vi README.md 
+   32  .......................
+   33  date
+   34  time
+   35  kubectl run firstpod --image=nginx --restart=Never
+   36  kubectl get pods -A
+   37  kubectl get pods
+   38  ip addr
+   39  kubectl edit pods firstpod
+   40  minikube dashboard
+   41  kubectl
+   42  kubectl cluster-info
+   43  kubectl get pods
+   44  kubectl delete pods firstpod
+   45  kubectl get posd
+   46  kubectl get pods
+   47  kubectl get deployments
+   48  kubectl get deployments -A
+   49  kubectl run firstpod --image=nginx --restart=Never
+   50  kubectl get pods
+   51  kubectl get pods -n kubernetes-dashboard
+   52  kubectl get pods -o wide
+   53  kubectl get pods -n kubernetes-dashboard -o wide
+   54  kubectl get pods -n kubernetes-dashboard -o json
+   55  kubectl explain pods
+   56  kubectl get pods
+   57  kubectl descibe pods firstpod
+   58  kubectl describe pods firstpod
+   59  kubectl get pods -A
+   60  kubectl descibe pods kubernetes-dashboard
+   61  kubectl describe pods kubernetes-dashboard
+   62  kubectl describe pods kubernetes-dashboard -A
+   63  kubectl get pods -A
+   64  kubectl describe pods firstpod
+   65  kubectl logs firstpod
+   66  cd ..
+   67  cd pod/
+   68  ll
+   69  nano objectbasetemplate.yaml 
+   70  nano pod1.yaml 
+   71  cp pod1.yaml firstpod.yml
+   72  kubectl get pods
+   73  kubectl delete firstpod
+   74  kubectl delete pod firstpod
+   75  kubectl apply -f firstpod.yaml
+   76  ll
+   77  kubectl apply -f firstpod.yml 
+   78  ll
+   79  kubectl edit pod firstpod
+   80  clear
+   81  kubectl apply -f firstpod.yml 
+   82  kubectl describe firstpod
+   83  kubectl describe pod firstpod
+   84  nano firstpod.yml 
+   85  kubectl apply -f firstpod.yml 
+   86  kubectl describe pod firstpod
+   87  nano firstpod.yml 
+   88  kubectl apply -f firstpod.yml 
+   89  kubectl describe pod firstpod
+   90  export EDITOR='/usr/bin/nano'
+   91  kubectl edit pod firstpod
+   92  docker ps
+   93  ll
+   94  nano podlife1.yaml 
+   95  kubectl apply -f podlife1.yaml 
+   96  kubectl delete pods imageerrorpod
+   97  kubectl apply -f podlife2.yaml 
+   98  docker ps -a
+   99  kubectl delete pod succeededpod
+  100  kubectl get deployments
+  101  gnome
+  102  hostname
+  103  ip
+  104  uname
+  105  uname -h
+  106  uname --help
+  107  uname -a
+  108  history
+  109  cd ~
+  110  ll
+  111  history
+  112  kubectl get pods
+  113  kubectl delete pods firstpod
+  114  kubectl delete pod firstpod
+  115  kubectl apply -f k8sfundamentals/pod/podmulticontainer.yaml 
+  116  kubectl get pods
+  117  kubectl get pods -o wide
+  118  kubectl exec multiconiner sh
+  119  kubectl exec multicontainer sh
+  120  kubectl exec multicontainer -c webcontainer sh
+  121  kubectl exec multicontainer -c webcontainer --sh
+  122  kubectl exec multicontainer -c webcontainer -- /bin/sh
+  123  kubectl exec it multicontainer -c webcontainer -- /bin/sh
+  124  kubectl exec -it multicontainer -c webcontainer -- /bin/sh
+  125  kubectl exec -it multicontainer -- /bin/sh
+  126  ifconfig
+  127  ip addr
+  128  kubectl get pods -o wide
+  129  nano k8sfundamentals/pod/podmulticontainer.yaml 
+  130  kubectl logs -f multicontainer
+  131  kubectl logs -f multicontainer -c sidecar
+  132  kubectl port-forward pod/multicontainer 8080:80
+  133  kubectl port-forward pod/multicontainer 80:80
+  134  netstat -nlp
+  135  sudo apt install net-tools
+  136  netstat -nlp
+  137  netstat -nlp | grep tcp
+  138  kubectl port-forward pod/multicontainer 80:80
+  139  kubectl port-forward pod/multicontainer 8081:80
+  140  kubectl logs -f multicontainer -c sidecar
+  141  kubectl logs -f multicontainer
+  142  kubectl get pods -o wide
+  143  curl http://localhost:80
+  144  curl http://localhost
+  145  curl http://localhost:8081
+  146  curl http://localhost
+  147  nano k8sfundamentals/pod/podmulticontainer.yaml 
+  148  clear
+  149  history > history.dat
+  150  ll
+  151  nano history.dat 
+  152  kubectl get pods
+  153  kubectl apply -f k8sfundamentals/pod/podinitcontainer.yaml 
+  154  kubectl get pods
+  155  kubectl logs initcontainerpod
+  156  kubectl logs -f 7initcontainerpod
+  157  kubectl logs -f initcontainerpod
+  158  kubectl logs -f initcontainerpod -c initcontainer
+  159  nano k8sfundamentals/pod/podinitcontainer.yaml 
+  160  kubectl apply -f k8sfundamentals/pod/service1.yaml 
+  161  kubectl logs -f initcontainerpod -c initcontainer
+  162  kubectl get pods
+  163  kubectl get services
+  164  kubectl delete service myservice
+  165  kubectl get pods
+  166  kubectl delete pod initcontainerpod
+  167  kubectl get pods
+  168  kubectl delete pod initcontainerpod
+  169  minikube delete
+  170  minikube start
+  171  kubectl get pods
+  172  kubectl run firstpod --image=nginx --restart=Never
+  173  kubectl get pods
+  174  kubectl logs -f firstpod
+  175  kubectl get pods7
+  176  kubectl get pods,
+  177  kubectl get pods
+  178  kubectl logs -f firstpod
+  179  kubectl get pods
+  180  kubectl logs -f firstpod
+  181  kubectl get pods
+  182  kubectl logs -f firstpod
+  183  kubectl port-forward pod/multicontainer 8081:80
+  184  kubectl port-forward pod/firstpod 8081:80
+  185  netstat -nlp | grep tcp
+  186  kubectl port-forward pod/firstpod 8081:80
+  187  kubectl get pods -A
+  188  kubectl get pods -l "app" --show-labels
+  189  kubectl get pods
+  190  kubectl edit firstpod
+  191  kubectl edit pods firstpod
+  192  kubectl get pods
+  193  kubectl get pods -l "app" --show-labels
+  194  kubectl get pods -l "app=my" --show-labels
+  195  kubectl get pods -l "app=myapp" --show-labels
+  196  kubectl get pods -l "app=my*" --show-labels
+  197  kubectl get pods -l "app=my?" --show-labels
+  198  kubectl get pods -l "app=my" --show-labels
+  199  kubectl get pods -l "app=myapp" --show-labels
+  200  kubectl get pods -l "app=myapp" -s
+  201  kubectl get pods --help
+  202  kubectl get pods --help | grep --sh
+  203  kubectl get pods --help | grep show
+  204  clear
+  205  kubectl get pods
+  206  kubectl get nods
+  207  kubectl get nodes
+  208  kubectl get nodes --show-label
+  209  kubectl get nodes --show-labels
+  210  kubectl get etcd
+  211  kubectl apply -f k8sfundamentals/pod/podlabel.yaml 
+  212  ll
+  213  clear
+  214  kubectl get pods
+  215  clear
+  216  kubectl delete -f k8sfundamentals/pod/podlabel.yaml 
+  217  kubectl get pods
+  218  kubectl describe pods annotationpod
+  219  annotationpod
+  220  kubectl --help
+  221  kubectl --help | grep namespace
+  222  kubectl --help | grep names
+  223  kubectl create namespace app1
+  224  kubectl get namespace
+  225  history
+  226  kubectl config get
+  227  kubectl config set-context --current --namespace=app1
+  228  kubectl get pods
+  229  kubectl get pods -A
+  230  kubectl config set-context --current --namespace=default
+  231  kubectl get pods
+  232  kubectl delete namaspace app1
+  233  kubectl delete namaspaces app1
+  234  kubectl delete namespaces app1
+  235  kubectl delete namespaces default
+  236  history > k8sfundamentals/history.dat
